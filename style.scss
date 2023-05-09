@@ -1,0 +1,600 @@
+@font-face {
+    font-family: myfont;
+    src: url(fonts/Kufyan-Arabic-Black.otf);
+}
+$color-main: #e5c67d;
+$color-mai1: #a78c50;
+$color-secn: #202020;
+$color-thir: #171516;
+$color-thi1: #5b5b5b;
+$color-whit: #fff;
+$main-font:  myfont;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+body {
+    scroll-behavior: smooth;
+    // background-color:$color-thir1;
+    // color: $color-whit;
+}
+body,
+button {
+    font-family: $main-font
+}
+// start section one ( header ) ********************************
+.header {
+    width: 100%;
+    height: 20vh;
+    .header-nav {
+        width: 100%;
+        background-image: linear-gradient(to right, $color-thi1, $color-thir);
+        height: 80px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        box-shadow: $color-main 0px 4px 0px 0px;
+        box-shadow: 0.5px 0.5px 4px $color-secn;
+        z-index: 9999;
+        nav {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height: 80px;
+            @media screen and (min-width:992px) {
+                width: 95%;
+            }
+            img {
+                display: block;
+                width: 70px ;
+                height: auto;
+                line-height: 80px;
+
+            
+                @media screen and (max-width:992px) {
+                    width: 60px;
+                    margin: 10px;
+                }
+            }
+            ul {
+                list-style: none;
+
+                @media screen and (max-width:767px) {
+                    display: none;
+                }
+                li {
+                    display: inline-block;
+                    padding: 0 20px;
+                    a {
+                        text-decoration: none;
+                        color: $color-main;
+                        font-size: 15px;
+                        font-weight: lighter;
+                        background: transparent;
+                        position: relative;
+                        transition: 0.5s ease;
+                        padding: 5px;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            height: 2px;
+                            width: 0;
+                            background-color: $color-main;
+                            transition: 0.5s ease;
+                        }
+                        &:hover {
+                            color: $color-thir;
+                            transition-delay: 0.5s;
+                            &::before {
+                                width: 100%;
+                            }
+                            &::after {
+                                height: 100%;
+                                transition-delay: 0.4s;
+                                color: $color-main;
+                            }
+                        }
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            height: 0;
+                            width: 100%;
+                            background-color: $color-main;
+                            transition: .4s ease;
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
+            button {
+                color: $color-main;
+                display: inline-block;
+                width: 130px;
+                height: 40px;
+                margin: 20px;
+                position: relative;
+                overflow: hidden;
+                border: 2px solid $color-main;
+                transition: color .5s;
+                z-index: 1;
+                font-size: 15px;
+                border-radius: 6px;
+                color: $color-main;
+                background-color: $color-secn;
+                box-shadow: 1px 1px 5px $color-main;
+                @media screen and (max-width:992px) {
+                    display: none;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    background: $color-main;
+                    height: 150px;
+                    width: 200px;
+                    border-radius: 50%;
+                    top: 100%;
+                    left: 100%;
+                    transition: all .7s;
+                }
+                &:hover {
+                    color: $color-thir;
+                    &:before {
+                        top: -30px;
+                        left: -30px;
+                    }
+                }
+                &:active {
+                    &:before {
+                        background: $color-main;
+                        transition: background 0s;
+                    }
+                }
+            }
+        }
+    }
+}
+// over view section 1.1 ........................................
+.over-view {
+    width: 80%;
+    height:auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width:767px) {
+        width: 95%;
+        display: block;
+        text-align: center;
+    }
+    .over-view-text {
+        margin-top: 60px;
+        @media screen  and (max-width:767px){
+            margin-top:0 ;
+        }
+    }
+        button {
+            display: inline-block;
+            margin-top: 50px;
+            width: 140px;
+            height: 40px;
+            background-color: $color-thir;
+            border: none;
+            color: white;
+            margin-right: 10px;
+            border-radius: 6px;
+            transition: all 1s;
+            font-size: 16px;
+        }
+        .play {
+            background-color: transparent;
+            border: 1px solid $color-thir;
+            color: $color-thir;
+            &:hover {
+                background-color: $color-thir;
+                color: $color-whit;
+            }
+        }
+        .app {
+            &:hover {
+                background-color: transparent;
+                color: $color-thir;
+                border: 1px solid $color-thir;
+            }
+        }
+    .over-view-imge {
+        position: relative;
+        .shap {
+            width: 300px;
+            height: 300px;
+            background-color: $color-thir;
+            margin-top: 50px;
+            border-radius: 30% 70% 57% 43% / 41% 60% 40% 59%;
+            @media screen and (min-width:767px) {
+                
+            }
+            @media screen and (max-width:767px) {
+                text-align: center;
+                margin: 20px   60px;
+            }
+        }
+        .shap-img {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-image: url(/images/slider-one/mockup01-removebg-preview.png);
+            background-position: center;
+            background-size: cover;
+            top: 0;
+            @media screen and (max-width:767px) {
+                width: 400px;
+                height: 300px;
+            }
+        }
+    }
+}
+// start section two ( features )**********************************
+.features{
+    margin-top: 50px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+    h2{
+        margin-bottom: 40px;
+        // margin-right: 120px;
+        span{
+            display: inline-block;
+            width: 50px;
+            height: 5px;
+            background-color: $color-thir;
+        }
+    }
+    .all {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width:767px) {
+            flex-direction: column;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: $color-main;
+            padding: 50px 10px;
+            text-align: center;
+            border-radius: 35px;
+            @media screen and (max-width:1300px) {
+                margin: 10px;
+            }
+            @media screen and (max-width:767px) {
+                margin: 10px;
+            }
+            &:hover {
+                transform: rotate(5deg);
+            }
+            ion-icon {
+                font-size: 35px;
+                color: $color-thir;
+            }
+            span {
+                display: block;
+                width: 50px;
+                height: 4px;
+                background-color: $color-thir;
+                margin-right: 65px;
+                margin-top: 20px;
+
+                @media screen and (max-width:1080px) {
+                    display: none;
+                }
+            }
+        }
+        .odd {
+            margin-top: -50px;
+            @media screen and (max-width:767px) {
+                margin-top: 0;
+                display: inline-block;
+            }
+        }
+    }
+    
+}
+// start section three ( prices )**********************************
+.prices1 {
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    height: 550px;
+
+    h1 {
+        // color: $color-whit;
+        padding-right: 130px;
+        padding-top: 30px;
+        text-align: center;
+
+        span {
+            display: inline-block;
+            width: 50px;
+            height: 5px;
+            background-color: $color-thir;
+        }
+    }
+
+    .prices {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 60px;
+
+        @media screen and (max-width:767px) {
+            display: block;
+        }
+
+        div {
+            width: 30%;
+            height: 370px;
+            padding: 50px 20px;
+            text-align: center;
+            transition: 0.5s ease-in-out;
+            border-radius: 6px;
+            color: $color-whit;
+            background-color: $color-secn ;
+
+            @media screen and (max-width:767px) {
+                width: 80%;
+                margin: auto;
+                margin-bottom: 40px;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            .icons {
+                font-size: 40px;
+                margin-bottom: 10px;
+                color: $color-main;
+            }
+
+            p {
+                margin-top: 20px;
+
+                @media screen and (max-width:992px) {
+                    font-size: 12px;
+                }
+            }
+
+            button {
+                width: 90px;
+                height: 35px;
+                background-color: $color-main;
+                border: 1px solid $color-thir;
+                border-radius: 5px;
+                margin-top: 20px;
+                text-align: center;
+
+                &:hover {
+                    box-shadow: 1px 1px 3px $color-thir;
+                }
+            }
+        }
+
+        .center {
+            transform: scaleY(1.1);
+        }
+    }
+}
+// start section four ( download ) *******************************
+.download-app {
+    width: 100%;
+    height: auto;
+    background-color: $color-thir;
+    margin-top: 60px;
+    color: $color-whit;
+    display: flex;
+    padding: 10px 130px;
+    align-items: center;
+
+    @media screen and (max-width:767px) {
+        margin-top: 850px;
+        text-align: center;
+        padding: 10px 20px;
+    }
+    .download-app-text {
+        width: 50%;
+
+        @media screen and (max-width:767px) {
+            width: 100%;
+        }
+        p {
+            padding: 20px 0;
+        }
+    }
+    button {
+        margin-top: 10px;
+        width: 140px;
+        height: 40px;
+        background-color: $color-thir;
+        border: 1px solid $color-whit;
+        color: white;
+        border-radius: 6px;
+        margin: 0 10px;
+        @media screen and (max-width:992px) {
+            margin-bottom: 10px;
+        }
+        &:hover {
+            background-color: $color-whit;
+            color: $color-thir;
+            box-shadow: 1px 1px 5px $color-whit;
+        }
+    }
+    .download-app-imag {
+        width: 500px;
+        height: 300px;
+        background-image: url(/images/slider-one/download.png);
+        background-size: cover;
+        background-position: center;
+        border-left: 1px solid $color-main;
+
+        @media screen and (max-width:767px) {
+            display: none;
+        }
+    }
+} 
+// start section five (counter) **********************************
+.counter {
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+
+    .counter-text {
+        text-align: center;
+    }
+
+    .counter-count {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+        text-align: center;
+
+        ion-icon {
+            font-size: 45px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 12px;
+            font-weight: lighter;
+            color: $color-secn;
+        }
+    }
+}
+// start section six (slider )************************************
+.swiper {
+    width: 90%;
+    height: 10%;
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h2 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 40px;
+    }
+}
+// start section seven ( contact us ) *****************************
+.contact-us {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+
+    @media screen and (max-width:767px) {
+        text-align: center;
+    }
+
+    .contact {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+
+        @media screen and (max-width:1300px) {
+            display: block;
+            text-align: center;
+        }
+
+        input {
+            display: inline-block;
+            width: 600px;
+            height: 50px;
+            margin-bottom: 25px;
+            border-radius: 6px;
+            outline: none;
+            border: 2px solid $color-main;
+            padding: 10px;
+            font-size: 12px;
+            color: $color-thir;
+            font-family: $main-font;
+
+            @media screen and (max-width:767px) {
+                width: 400px;
+            }
+        }
+
+        textarea {
+            border: 2px solid $color-main;
+            font-family: $main-font;
+            padding: 10px;
+            color: $color-thir;
+            font-size: 15px;
+            outline: none;
+        }
+    }
+}
+// start  sectio eigth ( footer )
+.footer {
+    width: 100%;
+    background-color: $color-thir;
+
+    .flex0 {
+        width: 80%;
+        height: 250px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+        color: $color-whit;
+
+        @media screen and (max-width:767px) {
+            display: block;
+        }
+    }
+
+    .two,
+    .three {
+        @media screen and (max-width:767px) {
+            display: none;
+        }
+    }
+
+    button {
+        width: 140px;
+        height: 40px;
+        border: 1px solid $color-whit;
+        color: $color-whit;
+        background-color: $color-thir;
+        border-radius: 6px;
+        display: block;
+        margin: 10px;
+
+        @media screen and (max-width:767px) {
+            display: inline-block;
+            margin-top: 25px;
+        }
+
+    }
+}
