@@ -20,6 +20,9 @@ body {
     scroll-behavior: smooth;
     // background-color:$color-thir1;
     // color: $color-whit;
+    @media screen and (max-width:375px) {
+        overflow-x: hidden;
+    }
 }
 body,
 button {
@@ -171,7 +174,8 @@ button {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    @media screen and (max-width:767px) {
+
+    @media screen and (max-width:375px) {
         width: 95%;
         display: block;
         text-align: center;
@@ -252,6 +256,9 @@ button {
     h2{
         margin-bottom: 40px;
         // margin-right: 120px;
+        @media screen and (max-width:375px) {
+            font-size: 15px;
+        }
         span{
             display: inline-block;
             width: 50px;
@@ -323,6 +330,10 @@ button {
         padding-right: 130px;
         padding-top: 30px;
         text-align: center;
+        @media screen and (max-width:375px) {
+            font-size: 15px;
+            padding-right: 0;
+        }
 
         span {
             display: inline-block;
@@ -408,7 +419,6 @@ button {
     display: flex;
     padding: 10px 130px;
     align-items: center;
-
     @media screen and (max-width:767px) {
         margin-top: 850px;
         text-align: center;
@@ -516,6 +526,7 @@ button {
     @media screen and (max-width:767px) {
         text-align: center;
     }
+   
 
     .contact {
         display: flex;
@@ -542,6 +553,11 @@ button {
 
             @media screen and (max-width:767px) {
                 width: 400px;
+                
+            }
+            @media screen and (max-width:375px) {
+                width: 250px;
+              
             }
         }
 
@@ -552,6 +568,9 @@ button {
             color: $color-thir;
             font-size: 15px;
             outline: none;
+            @media screen and (max-width:375px) {
+                width: 250px;
+            }
         }
     }
 }
@@ -559,7 +578,9 @@ button {
 .footer {
     width: 100%;
     background-color: $color-thir;
-
+    @media screen and (max-width:375px) {
+        margin-top: 30px;
+    }
     .flex0 {
         width: 80%;
         height: 250px;
@@ -568,7 +589,9 @@ button {
         justify-content: space-between;
         padding-top: 30px;
         color: $color-whit;
-
+        @media screen and (max-width:375px) {
+            width: 95%;
+        }
         @media screen and (max-width:767px) {
             display: block;
         }

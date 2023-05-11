@@ -12,6 +12,11 @@
 body {
   scroll-behavior: smooth;
 }
+@media screen and (max-width: 375px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 
 body,
 button {
@@ -167,7 +172,7 @@ button {
   display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 375px) {
   .over-view {
     width: 95%;
     display: block;
@@ -251,6 +256,11 @@ button {
 .features h2 {
   margin-bottom: 40px;
 }
+@media screen and (max-width: 375px) {
+  .features h2 {
+    font-size: 15px;
+  }
+}
 .features h2 span {
   display: inline-block;
   width: 50px;
@@ -327,6 +337,12 @@ button {
   padding-right: 130px;
   padding-top: 30px;
   text-align: center;
+}
+@media screen and (max-width: 375px) {
+  .prices1 h1 {
+    font-size: 15px;
+    padding-right: 0;
+  }
 }
 .prices1 h1 span {
   display: inline-block;
@@ -543,6 +559,11 @@ button {
     width: 400px;
   }
 }
+@media screen and (max-width: 375px) {
+  .contact-us .contact input {
+    width: 250px;
+  }
+}
 .contact-us .contact textarea {
   border: 2px solid #e5c67d;
   font-family: myfont;
@@ -551,10 +572,20 @@ button {
   font-size: 15px;
   outline: none;
 }
+@media screen and (max-width: 375px) {
+  .contact-us .contact textarea {
+    width: 250px;
+  }
+}
 
 .footer {
   width: 100%;
   background-color: #171516;
+}
+@media screen and (max-width: 375px) {
+  .footer {
+    margin-top: 30px;
+  }
 }
 .footer .flex0 {
   width: 80%;
@@ -564,6 +595,11 @@ button {
   justify-content: space-between;
   padding-top: 30px;
   color: #fff;
+}
+@media screen and (max-width: 375px) {
+  .footer .flex0 {
+    width: 95%;
+  }
 }
 @media screen and (max-width: 767px) {
   .footer .flex0 {
