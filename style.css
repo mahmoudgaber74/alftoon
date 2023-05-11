@@ -12,6 +12,8 @@
 body {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background-color: #5b5b5b;
+  color: #fff;
 }
 @media screen and (max-width: 375px) {
   body {
@@ -218,6 +220,11 @@ button {
 .over-view .over-view-imge {
   position: relative;
 }
+@media screen and (min-width: 375px) {
+  .over-view .over-view-imge {
+    display: none;
+  }
+}
 .over-view .over-view-imge .shap {
   width: 300px;
   height: 300px;
@@ -235,7 +242,7 @@ button {
   position: absolute;
   width: 400px;
   height: 400px;
-  background-image: url(/images/slider-one/mockup01-removebg-preview.png);
+  background-image: url(images/slider-one/mockup01-removebg-preview.png);
   background-position: center;
   background-size: cover;
   top: 0;
@@ -464,7 +471,7 @@ button {
 .download-app .download-app-imag {
   width: 500px;
   height: 300px;
-  background-image: url(/images/slider-one/download.png);
+  background-image: url(images/slider-one/download.png);
   background-size: cover;
   background-position: center;
   border-left: 1px solid #e5c67d;
@@ -525,6 +532,7 @@ button {
   width: 80%;
   margin: auto;
   margin-top: 50px;
+  display: none;
 }
 @media screen and (max-width: 767px) {
   .contact-us {

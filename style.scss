@@ -24,6 +24,8 @@ body {
         overflow-x: hidden;
     }
     overflow-x: hidden;
+    background-color: $color-thi1;
+    color: $color-whit;
 }
 body,
 button {
@@ -527,6 +529,7 @@ button {
     width: 80%;
     margin: auto;
     margin-top: 50px;
+    display: none;
 
     @media screen and (max-width:767px) {
         text-align: center;
